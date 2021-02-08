@@ -27,6 +27,17 @@ header{
 	margin-bottom: 50px;
 	background-color: #5B5D65;
 }
+
+.github-button > img{
+	width: 50px;
+	position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transition: opacity 0.2s;
+}
+.github-button > img:hover{
+	opacity: 0.7;
+}
 .elements-container{
 	display: grid;
 	grid-template-columns: auto auto auto auto;
