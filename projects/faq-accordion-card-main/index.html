@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+
+	<title>Frontend Mentor | FAQ Accordion Card</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="card-container">
+
+		<div class="card">
+			<img class="card-element-img-bg" src="img/bg-pattern-desktop.svg" alt="" />
+			<img class="card-element-img" src="img/illustration-woman-online-desktop.svg" alt="" />
+			<div class="card-element">
+				<h1>FAQ</h1>
+				<span class="faq-button" onclick="clickOnButton('1')">How many team members can I invite?<span id="arrow1" class="faq-button-arrow"><img src="img/icon-arrow-down.svg"/></span>
+				<label for="faq-button" id="faq1" class="faq-info">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</label></span>
+				<span class="faq-button" onclick="clickOnButton('2')">What is the maximum file upload size?<span id="arrow2" class="faq-button-arrow"><img src="img/icon-arrow-down.svg"/></span></span>
+				<label for="faq-button" id="faq2" class="faq-info">No more than 2GB. All files in your account must fit your allotted storage space.</label>
+				<span class="faq-button" onclick="clickOnButton('3')">How do I reset my password?<span id="arrow3" class="faq-button-arrow"><img src="img/icon-arrow-down.svg"/></span></span>
+				<label for="faq-button" id="faq3" class="faq-info">Click “Forgot password” from the login page or “Change password” from your profile page.
+				A reset link will be emailed to you.</label>
+				<span class="faq-button" onclick="clickOnButton('4')">Can I cancel my subscription?<span id="arrow4" class="faq-button-arrow"><img src="img/icon-arrow-down.svg"/></span></span>
+				<label for="faq-button" id="faq4" class="faq-info">Yes! Send us a message and we’ll process your request no questions asked.</label>
+				<span class="faq-button" onclick="clickOnButton('5')">Do you provide additional support?<span id="arrow5" class="faq-button-arrow"><img src="img/icon-arrow-down.svg"/></span></span>
+				<label for="faq-button" id="faq5" class="faq-info">Chat and email support is available 24/7. Phone lines are open during normal business hours.</label>
+			</div>
+		</div>
+		<img class="card-container-box-img" src="img/illustration-box-desktop.svg" alt="" />
+	</div>
+	<script type="text/javascript">
+		function clickOnButton(id) {
+			var elements = document.getElementsByClassName("faq-info-visible");
+			for (i = 0; i < elements.length; i++) {
+				if(elements[i].id != "faq" + id){
+					elements[i].style.display = "none";
+					elements[i].className = "faq-info";
+				}
+			}
+			var arrows = document.getElementsByClassName("faq-button-arrow-rotated");
+			for (i = 0; i < arrows.length; i++) {
+				if(arrows[i].id != "faq" + id){
+					arrows[i].className = "faq-button-arrow";
+				}
+			}
+			
+			var element = document.getElementById("faq" + id);
+
+			if(element != null){
+				var arrow = document.getElementById("arrow" + id);
+				if(element.style.display == "block"){
+					arrow.className = "faq-button-arrow";
+					element.style.display = "none";
+					element.className = "faq-info";
+				}else{
+					arrow.className = "faq-button-arrow-rotated";
+					arrow.style.transition = "transform 0.2s";
+					element.style.display = "block";
+					element.className += " faq-info-visible";
+				}
+			}
+			
+		}
+	</script>
+</body>
+</html>
