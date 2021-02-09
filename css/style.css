@@ -56,20 +56,20 @@ header{
 }
 .element-image{
 	width: 100%;
+	height: 50%;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 .element-name{
 	padding: 10px;
+	width: 100%;
 	text-align: center;
 	position: absolute;
-	top: 30%;
+	top: 35%;
 	left: 50%;
 	transform: translate(-50%, 85%);
 	background-color: #393A3F;
-	border-radius: 15px;
-	border: 2px solid #F5F5F5;
 	color: white;
 }
 .show-project-button{
