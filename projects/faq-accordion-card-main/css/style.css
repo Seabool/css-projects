@@ -34,7 +34,7 @@ top: 320px;
 	width: 60%;
 	height: 500px;
 	background-color: white;
-	margin: 130px auto;
+	margin: 150px auto;
 	border-radius: 20px;
 	padding: 15px;
 	position: relative;
@@ -76,6 +76,7 @@ top: 320px;
 	cursor: pointer;
 }
 .faq-button-arrow{
+	padding-left: 10px;
 	float: right;
 	transition: transform 0.2s;
 }
