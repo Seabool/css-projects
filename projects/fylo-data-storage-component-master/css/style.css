@@ -106,9 +106,14 @@ div{
 }
 
 @media (max-width: 1000px) {
+	body{
+		background: url("../img/bg-mobile.png");
+		background-size: cover;
+	}
 	.container{
 		flex-direction: row;
   flex-wrap: wrap;
+  margin: 20vh auto;
 }
 .left-container{
 	width: 100%;
